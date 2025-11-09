@@ -163,7 +163,7 @@ namespace eserciziArray
             int n2 = Convert.ToInt32(Console.ReadLine());
             for (int i = n1; n1 <= n2; i++)
             {
-                if (i == array7[i])
+                if ( array7[i] >= n1 && array7[i] <= n2)
                 {
                     Console.WriteLine("il numero " + array7[i] + " e compreso nell'intervallo");
                   
@@ -180,10 +180,10 @@ namespace eserciziArray
                 Console.WriteLine("dammi l'inizio dell'intervallo");
                 int n3 = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("dammi la fine dell'intervallo");
-                int n4 = Convert.ToInt32(Console.ReadLine());
+                int n4 = Convert.ToInt32(Console.ReadLine()); 
                 for (int i = n3; n3 <= n4; i++)
-                {
-                    if (i == array7[i])
+                { 
+                    if (array7[i] >= n3 && array7[i] <= n4)
                     {
                         Console.WriteLine("il numero " + array7[i] + " e compreso nell'intervallo");
 
