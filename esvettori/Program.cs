@@ -202,13 +202,22 @@ namespace eserciziArray
 
             int[] vettore = { 2, 3, 5, -8, 79, 108 };
             int[] vet = { 20, 4, 7, 22, 18 };
-
+            int[] v3 = new int[vettore.Length + vet.Length];
             for (int i = 0; i < vettore.Length; i++)
             {
-
-
+                v3[i] = vettore[i];
 
             }
+            for (int i = vettore.Length; i < v3.Length; i++)
+            {
+                v3[i] = vet[i - vettore.Length];
+            }
+            for (int i = 0; i < v3.Length; ++i)
+            {
+                 Console.Write($"[{ v3[i]}]");
+            }
+
+            Console.WriteLine("-----------------------------");
         }
     }
 }
