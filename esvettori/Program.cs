@@ -155,14 +155,15 @@ namespace eserciziArray
 
             Console.WriteLine("-----------------------------");
 
-            int[] array7 = { 4, -5, 2, 10, -7 };
+            int[] array7 = { 1, 2, 3, 4, 5 };
             int contan = 0;
             Console.WriteLine("dammi l'inizio dell'intervallo");
             int n1 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("dammi la fine dell'intervallo");
             int n2 = Convert.ToInt32(Console.ReadLine());
-            for (int i = n1; n1 <= n2; i++)
-            {
+            for (int i = 0; i < array7.Length; i++) {
+            
+            
                 if ( array7[i] >= n1 && array7[i] <= n2)
                 {
                     Console.WriteLine("il numero " + array7[i] + " e compreso nell'intervallo");
@@ -195,6 +196,18 @@ namespace eserciziArray
                     }
 
                 }
+            }
+
+            Console.WriteLine("-----------------------------");
+
+            int[] vettore = { 2, 3, 5, -8, 79, 108 };
+            int[] vet = { 20, 4, 7, 22, 18 };
+
+            for (int i = 0; i < vettore.Length; i++)
+            {
+
+
+
             }
         }
     }
