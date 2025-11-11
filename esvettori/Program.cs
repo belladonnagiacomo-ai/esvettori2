@@ -155,7 +155,7 @@ namespace eserciziArray
 
             Console.WriteLine("-----------------------------");
 
-            int[] array7 = { 1, 2, 3, 4, 5 };
+            int[] array7 = { 13, 14, 17, 24, 10 };
             int contan = 0;
             Console.WriteLine("dammi l'inizio dell'intervallo");
             int n1 = Convert.ToInt32(Console.ReadLine());
@@ -182,7 +182,7 @@ namespace eserciziArray
                 int n3 = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("dammi la fine dell'intervallo");
                 int n4 = Convert.ToInt32(Console.ReadLine()); 
-                for (int i = n3; n3 <= n4; i++)
+                for (int i = 0; i < array7.Length; i++)
                 { 
                     if (array7[i] >= n3 && array7[i] <= n4)
                     {
