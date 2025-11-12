@@ -64,17 +64,18 @@ namespace eserciziArray
             }
             return destinazione;
         }
-        static int copyReverseArray(int[] sorgente2, int[] destinazione2) 
+        static int[] copyReverseArray(int[] sorgente) 
         {
-            for (int i = 0; i < sorgente2.Length; i++)
+            int[] destinazione = new int[sorgente.Length];
+            for (int i = 0; i < sorgente.Length; i++)
             {
-                destinazione2[i] = sorgente2[i];
+                destinazione[i] = sorgente[i];
             }
-            for (int i = destinazione2.Length; i >= 0; i--)
+            for (int i = destinazione.Length; i > 0; i--)
             {
-                Console.WriteLine($"[{destinazione2[i]}]");
+                Console.WriteLine($"[{destinazione[i]}]");
             }
-            return destinazione2;
+            return destinazione;
         }
         static void Main(string[] args)
         {
@@ -318,8 +319,7 @@ namespace eserciziArray
 
             Console.WriteLine("-----------------------------");
 
-            int[] sorgente2 = { 1, 2, 3, 4, 5 };
-            int[] destinazione2 = new int[sorgente2.Length];
+            copyReverseArray(sorgente);
         }
     }
 }
