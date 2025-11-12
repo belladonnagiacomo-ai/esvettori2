@@ -3,6 +3,79 @@ namespace eserciziArray
 {
     internal class Program
     {
+        static int countElement(int n, int[] array11)
+        {
+            int c = 0;
+            for(int i = 0; i < array11.Length; i++)
+            {
+                if (array11[i] == n)
+                {
+                    c++;
+                }
+            }
+            Console.WriteLine("il numero " + n + " e all'interno del vettore per " + c + " volte");
+            return n;
+        }
+        static bool contaN(int n, int[] array12)
+        {
+            int c = 0;
+            for (int i = 0; i < array12.Length; i++)
+            {
+                if (array12[i] == n)
+                {
+                    c++;
+                }
+            }
+            if(c >= 1)
+            {
+                return true;
+            }
+            return false;
+        }
+        static int findElement(int n, int[] array13)
+        {
+            int c = 0;
+            for (int i = 0; i < array13.Length; i++)
+            {
+                if (array13[i] == n)
+                {
+                    c = i;
+                    Console.WriteLine("il numero " + n + " si trova nella posizione " + i);
+                }
+                else
+                {
+                    c = -1;
+                    Console.WriteLine("il numero " + n + " non si trova in questa posizione");
+                }
+            }
+
+            return c;
+
+        }
+        static int[] copyArray(int[] sorgente, int[] destinazione)
+        {
+            for (int i = 0 ;  i < sorgente.Length; i++)
+            {
+                destinazione[i] = sorgente[i];
+            }
+            for (int i = 0; i < destinazione.Length; ++i)
+            {
+                Console.WriteLine($"[{destinazione[i]}]");
+            }
+            return destinazione;
+        }
+        static int copyReverseArray(int[] sorgente2, int[] destinazione2) 
+        {
+            for (int i = 0; i < sorgente2.Length; i++)
+            {
+                destinazione2[i] = sorgente2[i];
+            }
+            for (int i = destinazione2.Length; i >= 0; i--)
+            {
+                Console.WriteLine($"[{destinazione2[i]}]");
+            }
+            return destinazione2;
+        }
         static void Main(string[] args)
         {
 
@@ -214,10 +287,39 @@ namespace eserciziArray
             }
             for (int i = 0; i < v3.Length; ++i)
             {
-                 Console.Write($"[{ v3[i]}]");
+                 Console.WriteLine($"[{ v3[i]}]");
             }
 
             Console.WriteLine("-----------------------------");
+
+            int[] array11 = { 2, 15, 20, 2, 9 };
+            Console.WriteLine("dammi un valore");
+            int n = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(countElement(n, array11));
+
+            Console.WriteLine("-----------------------------");
+
+            int[] array12 = { 2, 15, 20, 2, 9 };
+            if(contaN(n, array12) == true)
+            {
+                Console.WriteLine("il numero " + n + " e contenuto nel vettore");
+            }
+
+            Console.WriteLine("-----------------------------");
+
+            int[] array13 = { 2, 15, 20, 2, 9 };
+            Console.WriteLine(findElement(n, array13));
+
+            Console.WriteLine("-----------------------------");
+
+            int[] sorgente = { 1, 2, 3, 4, 5 };
+            int[] destinazione = new int[sorgente.Length];
+            copyArray(sorgente, destinazione);
+
+            Console.WriteLine("-----------------------------");
+
+            int[] sorgente2 = { 1, 2, 3, 4, 5 };
+            int[] destinazione2 = new int[sorgente2.Length];
         }
     }
 }
