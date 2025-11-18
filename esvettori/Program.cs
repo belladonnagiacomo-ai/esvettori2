@@ -320,6 +320,22 @@ namespace eserciziArray
             Console.WriteLine("-----------------------------");
 
             copyReverseArray(sorgente);
+
+            Console.WriteLine("-----------------------------");
+
+            int[] v4 = { 1, 2, 3, 4, 5 };
+            int[] v5 = { 1, 4, 12, 8, 7 };
+            int b = 0;
+            for (int i = 0; i < v4.Length; i++)
+            {
+                for(int I = 0;I < v5.Length; I++)
+                {
+                    if (v5[I] == v4[i])
+                    {
+                        b++;
+                    }
+                }
+            }
         }
     }
 }
